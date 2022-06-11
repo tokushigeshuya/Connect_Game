@@ -4,7 +4,7 @@
  <ul class="navbar-nav ml-auto">
  <% if user_signed_in? %>
            <li class="nav-item p-2">
-            <%= link_to 'つぶやき', '#', class:'list_text' %>
+            <%= link_to 'つぶやき', new_user_post_path, class:'list_text' %>
            </li>
            <li class="nav-item p-2">
             <%= link_to '募集', '#', class:'list_text' %>
@@ -33,7 +33,7 @@
               <%= link_to 'ABOUT', user_homes_about_path, class:'list_text' %>
             </li>
             <li class="nav-item p-2">
-              <%= link_to 'つぶやき', '#', class:'list_text' %>
+              <%= link_to 'つぶやき', new_user_post_path, class:'list_text' %>
             </li>
             <li class="nav-item p-2">
               <%= link_to 'ログイン', new_user_session_path, class:'list_text' %>

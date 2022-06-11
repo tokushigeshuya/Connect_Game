@@ -1,0 +1,21 @@
+
+  <%= form_with model: @post, url: user_posts_path, method: :post, local: true do |f| %>
+    <div class="filed">
+      <div class="col-2"><%= f.label :画像 %></div>
+      <%= f.file_field :image, accept: "image/*" %>
+    </div>
+    <div class="form-group">
+      <div class="mt-2"><%= f.label :'タイトル' %></dib><br>
+      <%= f.text_field :title, autofocus: true, class: 'form-control'%>
+    </div>
+    <div class="form-group">
+      <%= f.label :ジャンル %>
+      <p>ラジオボタンの予定</p>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :本文 %>
+      <%= f.text_area :body, autofocus: true, size:"50x10", class:'form-control' %>
+    </div>
+      <%= f.submit '投稿', class:'btn btn-success' %>
+  <% end %>

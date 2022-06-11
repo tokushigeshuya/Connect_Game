@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
     get 'homes/about'
     get 'homes/index'
+    
+    resources :posts do
+    end
   end
 
 
